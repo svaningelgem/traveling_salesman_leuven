@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+result*.gp?
+*.json
+.idea/
+*.gpx
