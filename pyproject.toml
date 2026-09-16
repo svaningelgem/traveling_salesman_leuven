@@ -1,0 +1,12 @@
+[project]
+name = "traveling-salesman-leuven"
+version = "0.0.0"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "mlrose_hiive",
+    "optuna",
+]
+
+[tool.uv]
+package = false
