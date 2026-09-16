@@ -4,7 +4,9 @@ from common import check_time, coordinates, cost, default_route, write_gps_file
 def main_2opt(route):
     def _swap_i_j():
         new_route = route.copy()
-        new_route[i:j] = route[j - 1 : i - 1 : -1]  # this is the 2-optSwap since j >= i we use -1
+        new_route[i:j] = route[
+            j - 1 : i - 1 : -1
+        ]  # this is the 2-optSwap since j >= i we use -1
         return new_route
 
     route_distance = cost(route)

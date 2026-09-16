@@ -37,7 +37,9 @@ def write_gps_file(coords: np.ndarray, name):
         fp.write(f"    <name>{name}</name>\n")
         fp.write("    <number>0</number>\n")
 
-        fp.writelines(f'    <rtept lat="{coord[0]}" lon="{coord[1]}"/>\n' for coord in coords)
+        fp.writelines(
+            f'    <rtept lat="{coord[0]}" lon="{coord[1]}"/>\n' for coord in coords
+        )
         fp.write("  </rte>\n")
         fp.write("</gpx>\n")
 
