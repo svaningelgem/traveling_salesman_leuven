@@ -2,7 +2,8 @@ import contextlib
 import csv
 import math
 from collections.abc import Generator
-from datetime import datetime
+from datetime import timedelta
+from time import perf_counter
 
 import numpy as np
 from scipy import spatial
@@ -54,12 +55,11 @@ def default_route():
 def check_time():
     print("Length of default route:", cost(default_route()))
 
-    start = datetime.now()
+    start = perf_counter()
     try:
         yield
     finally:
-        stop = datetime.now()
-        print("Time taken:", stop - start)
+        print("Time taken:", timedelta(seconds=perf_counter() - start))
 
 
 def cost(route):
